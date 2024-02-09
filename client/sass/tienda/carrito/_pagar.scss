@@ -1,0 +1,68 @@
+.cardPagar{
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.655);
+    background-color: #FF9900;
+    height: 650px;
+    width: 500px;
+}
+
+.tarjeta{
+    color: black;
+    font-size: 100px;
+    margin: 0 200px;
+}
+
+#precioPagar{
+    margin-left: 25px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 500px;
+    text-align: center;
+    justify-items: center;
+    width: 450px;
+    height: 320px;
+    margin: 0px 25px;
+    padding: 25px 0;
+    background-color: #5c5c5c;
+    border-radius: 10px;
+
+    input{
+        text-transform: uppercase;
+        width: 250px;
+        height: 30px;
+        margin: 10px 0 15px 0;
+        background-color: #5c5c5c;
+        color: #FF9900;
+        font-size: 20px;
+        border: 1px solid #FF9900;
+        border-radius: 4px;
+    }
+    
+    label{
+        width: 450px;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-transform: uppercase;
+        padding-top: 15px;
+    }
+
+    #pagoF{
+        background-color: #ffbe5d;
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 7px;
+    }
+    
+    #pagoF:hover{
+        background-color: white;
+        color: #FF9900;
+        border: none;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 7px;
+    }
+}

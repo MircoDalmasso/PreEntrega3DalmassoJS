@@ -1,0 +1,39 @@
+.filtros-section{
+    margin-top: 15px;
+    height: 925px;
+    border-radius: 20px;
+    width: 180px;
+    .title-fltros{
+    color: black;
+    margin-left: 10px;
+
+    
+    }
+    ul{
+        padding: 0;
+        margin-left: 10px;
+    }
+    li{
+        list-style: none;
+        button{
+            background-color: #FF9900;
+            color: white;
+            border: none;
+            margin: 5px 0px;
+            font-size: 15px;
+            padding: 5px;
+            border-radius: 7px;
+            width: 150px;
+        }
+        button:hover{
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.200);
+        }
+    }
+}
+.type-filter{
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}

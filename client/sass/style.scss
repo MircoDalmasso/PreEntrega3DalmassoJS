@@ -1,0 +1,48 @@
+// imports
+@use './imports';
+
+// estilos generales
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #5c5c5c;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+#name-tienda{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.logo{
+    height: 18px;
+    margin: 0 20px;
+}
+#container-header{
+    display: flex;
+    background-color: #FF9900;
+    justify-content: center;
+}
+
+// button header
+.button-header{
+    color: white;
+    font-size: 40px;
+    margin: 5px;
+    padding: 5px;
+}
+
+// tienda
+.container-body{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
