@@ -169,14 +169,24 @@ const errorCompra = () => {
 
 let buttonPagar = document.getElementById("buttonPagar");
 
-const precioTotalNumero = parseInt(totalPrice.innerText.replace("$", ""));
+// Proceso para el nombre del pago
+let carritoLS = JSON.parse(localStorage.getItem("carrito"));
+let nombresConcatenados = "";
+carritoLS.forEach(element => {
+    nombresConcatenados += element.nombre;
+});
+
+let precioTotalMP = 0;
+carritoLS.forEach(element => {
+    precioTotalMP += element.precio;
+});
 
 buttonPagar.addEventListener("click", async () => {
     try{
         const orderData = {
-            title: "carrito",
+            title: `${nombresConcatenados}`,
             quantity: 1,
-            price: 1500,
+            price: precioTotalMP,
         };
     
         const response = await fetch("http://localhost:3000/create_preference", {
@@ -212,35 +222,3 @@ const createCheckoutButton = (preferenceId) => {
 const mp = new MercadoPago('TEST-560127d4-2e85-4872-acd2-5fb1081ed738', {
     locale: "es-AR",
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let verificacion = localStorage.getItem("carrito") === "[]";
-
-    const finalizarCompra = () => {
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Compra finalizada!",
-            showConfirmButton: false,
-            timer: 2000
-        });
-        localStorage.clear();
-        sectionCaritto.innerHTML = "";
-        totalPrice.innerHTML = "$0"
-        setTimeout( () =>{
-            location.reload();
-        },3000);
-    }
-
