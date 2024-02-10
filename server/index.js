@@ -22,13 +22,13 @@ app.post("/create_preference", async (req, res) =>{
             items: [{
                 title: req.body.title,
                 quantity: Number(req.body.quantity),
-                unit_price: req.body.price,
+                unit_price: Number(req.body.price),
                 currency_id: "ARS",
             },],
             back_urls: {
-                success: "",
-                failure: "",
-                pending: ""
+                success: "index.html",
+                failure: "index.html",
+                pending: "index.html"
             },
             auto_return: "approved",
         };
